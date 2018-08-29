@@ -143,7 +143,6 @@ rm -rf /tmp/monitor.*
 
 echo "==============================================================================="
 echo  "Job Done つ◕◡◕つ"
-echo  "To change values, please reboot."
 echo  Instalation directory: $script
 echo  "To call script enter: monitor"
 echo "==============================================================================="
