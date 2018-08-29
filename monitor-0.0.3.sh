@@ -120,8 +120,7 @@ free -h | head -n1 -n2
 
 # Check Disk Usages
 echo "==============================================================================="
-df -h| grep 'Filesystem\|/dev/sda*' >> "$tdir/diskusage.tmp"
-df -h| grep 'Filesystem\|/dev/mapper*' >> "$tdir/diskusage.tmp"
+df -h| grep 'Filesystem\|/dev/sda*\|/dev/mapper*' >> "$tdir/diskusage.tmp"
 echo "Disk Usages :"
 cat "$tdir/diskusage.tmp"
 
