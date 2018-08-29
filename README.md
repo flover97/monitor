@@ -1,14 +1,9 @@
-# Monitor
-
-![Start as command](https://github.com/flover97/monitor/blob/master/monitor.png)
-
 # Preview:
+![Start as command](https://github.com/flover97/monitor/blob/master/monitor.png)
+![startup at session entry](https://github.com/flover97/monitor/blob/master/monitor2.png)
 
-  - curl
-  - wget
 
-
-For the script to work properly you need:
+# For the script to work properly you need:
   - curl
   - wget
 
