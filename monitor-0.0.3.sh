@@ -106,7 +106,8 @@ echo "External IP :" "$externalip"
 # Check DNS
 echo "==============================================================================="
 nameservers=$(</etc/resolv.conf grep "nameserver" | awk '{print $2}')
-echo "Name Servers :"  "$nameservers"
+echo "Name Servers :"
+echo "$nameservers"
 
 # Check Logged In Users
 echo "==============================================================================="
