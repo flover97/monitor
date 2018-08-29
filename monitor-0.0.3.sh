@@ -127,7 +127,7 @@ cat "$tdir/diskusage.tmp"
 
 # Check Load Average
 echo "==============================================================================="
-loadaverage=$(top -n 1 -b | grep "load average:" | awk '{print $10 $11 $12}')
+loadaverage=$(/proc/loadavg <awk '{print $1,$2,$3}')
 echo "Load Average :"  "$loadaverage"
 
 # Check System Uptime
