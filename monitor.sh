@@ -34,11 +34,52 @@ fi
 #========================================================
 </etc/passwd grep /bash | cut -d: -f6 >> "$tdir/home.tmp"
 
-while read -r home
-do
-        find "$home"  -iname ".*hrc" >> "$tdir/hrc.tmp"
-        find "$home"  -iname ".*profile" >> "$tdir/profile.tmp"
-done <"$tdir/home.tmp"
+shell=$(echo "$SHELL")
+
+case $shell in
+     /bin/bash | /usr/bin/bash)
+         while read -r home
+         do
+                 find "$home"  -iname ".bashrc" >> "$tdir/hrc.tmp"
+                 find "$home"  -iname ".*profile" >> "$tdir/profile.tmp"
+         done <"$tdir/home.tmp"
+          ;;
+     /bin/sh | /usr/bin/sh)
+         while read -r home
+         do
+                 find "$home"  -iname ".*shrc" >> "$tdir/hrc.tmp"
+                 find "$home"  -iname ".*profile" >> "$tdir/profile.tmp"
+         done <"$tdir/home.tmp"
+          ;;
+     /bin/zsh | /usr/bin/zsh)
+         while read -r home
+         do
+                 find "$home"  -iname ".*zshrc" >> "$tdir/hrc.tmp"
+                 find "$home"  -iname ".*profile" >> "$tdir/profile.tmp"
+         done <"$tdir/home.tmp"
+          ;;
+     /bin/csh | /usr/bin/csh)
+         while read -r home
+         do
+                 find "$home"  -iname ".*cshrc" >> "$tdir/hrc.tmp"
+                 find "$home"  -iname ".*profile" >> "$tdir/profile.tmp"
+         done <"$tdir/home.tmp"
+          ;;
+     /bin/ksh | /usr/bin/ksh)
+         while read -r home
+         do
+                 find "$home"  -iname ".*kshrc" >> "$tdir/hrc.tmp"
+                 find "$home"  -iname ".*profile" >> "$tdir/profile.tmp"
+         done <"$tdir/home.tmp"
+          ;;
+     /bin/tcsh | /usr/bin/tcsh)
+         while read -r home
+         do
+                 find "$home"  -iname ".*tcshrc" >> "$tdir/hrc.tmp"
+                 find "$home"  -iname ".*profile" >> "$tdir/profile.tmp"
+         done <"$tdir/home.tmp"
+          ;;
+esac
 
 
 while read -r hrc
