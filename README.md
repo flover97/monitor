@@ -9,8 +9,8 @@ The script displays such information about the system as:
   - External IP
   - Name Servers
   - Logged In users
-  - Ram usage 
-  - Disk Usages 
+  - Memory usage 
+  - Disk Usage 
   - Load Average 
   - Uptime
   
