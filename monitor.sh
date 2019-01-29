@@ -174,6 +174,11 @@ echo "==========================================================================
 loadaverage=$(</proc/loadavg awk '{print $1,$2,$3}')
 echo "Load Average :"  "$loadaverage"
 
+# Check iowait
+echo "==============================================================================="
+iowait=$(iostat -c|awk '/^ /{print $4}')
+echo "I/O in %:" "$iowait"
+
 # Check System Uptime
 echo "==============================================================================="
 uptime=$(uptime | awk '{print $3,$4}' | cut -f1 -d,)
