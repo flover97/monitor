@@ -12,6 +12,7 @@ The script displays such information about the system as:
   - Memory usage 
   - Disk Usage 
   - Load Average 
+  - I/O 
   - Uptime
   
  The script is run when you log on to the system or through the command "monitor".
