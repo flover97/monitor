@@ -157,13 +157,13 @@ who
 
 # Check RAM and SWAP Usages
 echo "==============================================================================="
-echo "Ram usage :"
-free -h | head -n1 -n2
+echo "Memory usage :"
+free -h 
 
-# Check Disk Usages
+# Check Disk Usage
 echo "==============================================================================="
 df -h| grep 'Filesystem\|/dev/sda*\|/dev/mapper*\|/dev/md*\|/dev/disk*\|/dev/dm*' >> "$tdir/diskusage.tmp"
-echo "Disk Usages :"
+echo "Disk Usage :"
 cat "$tdir/diskusage.tmp"
 
 # Check Load Average
