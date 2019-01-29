@@ -24,6 +24,7 @@ The script displays such information about the system as:
 # For the script to work properly you need:
   - curl
   - wget
+  - sysstat
 
 ### Installation with git:
 Please start script as root.
