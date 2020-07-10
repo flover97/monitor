@@ -37,9 +37,5 @@ $ chmod +x monitor.sh
 ```
 ### Installation with wget:
 ```sh
-$ wget https://github.com/flover97/monitor/archive/master.zip
-$ unzip master.zip
-$ cd monitor-master
-$ chmod +x monitor.sh
-# ./monitor.sh
+$ wget https://raw.githubusercontent.com/flover97/monitor/master/monitor.sh && bash -x monitor.sh
 ```
